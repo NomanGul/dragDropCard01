@@ -1,22 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
 
 :root {
-  --primary: #0969DA;
-  --background: #EDEEF7;
-  --gray: #EDEEF7;
-  --white: #FCFCFC;
+  --primary: #0969da;
+  --background: #edeef7;
+  --gray: #edeef7;
+  --white: #fcfcfc;
   --navbar-height: 60px;
 }
 
 body {
-  font-family: "Red Hat Display", 
-      sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   font-size: 16px;
   background-color: var(--background);
   display: flex;
   height: 100vh;
   width: 100vw;
-  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,8 +36,7 @@ body {
   width: 100%;
   background-color: var(--white);
   border-radius: 32px;
-  box-shadow: 
-   rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
 }
 
 .team-member {
@@ -54,8 +51,7 @@ body {
   padding: 16px;
   align-items: center;
   background-color: var(--white);
-  box-shadow: 
-   rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
 }
 
 .team-member:hover {
@@ -65,6 +61,7 @@ body {
 .social-links {
   list-style-type: none;
   padding: 0;
+  padding-left: 24px;
   display: flex;
   margin-left: auto;
   gap: 6px;
@@ -74,6 +71,21 @@ body {
 .social-links img {
   height: 20px;
   width: 20px;
+}
+
+.social-links a {
+  padding: 2px;
+}
+
+.social-links svg {
+  color: black;
+  transition: fill 0.4s ease, transform 0.3s ease; /* Transition for color and scale */
+  transform-origin: center center;
+}
+
+.social-links svg:hover {
+  fill: black;
+  transform: scale(1.2);
 }
 
 .team-member-avatar {
@@ -102,19 +114,18 @@ body {
 }
 
 .team-member-chosen {
-  box-shadow: 8px 8px 32px #E1E1E1;
+  box-shadow: 8px 8px 32px #e1e1e1;
 }
 
 .team-member-drag {
   opacity: 0;
 }
 
-
-
-
-
 @media (max-width: 400px) {
-  .social-links {
-      display: none;
+  #team-members {
+    padding: 16px;
   }
-} 
+  .social-links {
+    padding: 0;
+  }
+}
